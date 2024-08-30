@@ -194,7 +194,8 @@ return 0;
 
 ```
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/837094f7-1e02-4b26-b051-446e60524913)
+![313373522-6a3a6834-4379-48ad-bad1-6ece8489402c](https://github.com/user-attachments/assets/078c22f2-75ad-4609-b3bf-6bb92ecda618)
+
 ## RESULT:
 
 The program is executed successfully
