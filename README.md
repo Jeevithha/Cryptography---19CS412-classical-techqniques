@@ -256,7 +256,7 @@ int main() {
     }}
 ```
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/c2a41c38-1c0c-43a8-afc1-2d104e8112cd)
+![image](https://github.com/user-attachments/assets/fa8f0644-698d-4b1e-9dbf-7645d5f6e151)
 
 ## RESULT:
 
