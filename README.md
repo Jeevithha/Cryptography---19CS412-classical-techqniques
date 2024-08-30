@@ -1,63 +1,83 @@
 # Cryptography---19CS412-classical-techqniques
-## Hill Cipher
-Hill Cipher using with different key values
+## Vigenere Cipher
+Vigenere Cipher using with different key values
 ### AIM:
-To develop a simple C program to implement Hill Cipher.
+To develop a simple C program to implement Vigenere Cipher.
 ### DESIGN STEPS:
 Step 1:
-Design of Hill Cipher algorithnm
+Design of Vigenere Cipher algorithnm
 Step 2:
 Implementation using C or pyhton code
 Step 3:
 Testing algorithm with different key values.
 ### PROGRAM:
 ```
-#include<stdio.h>
+#include <stdio.h>
 #include<conio.h>
-#include<string.h>
-int main(){
-unsigned int a[3][3]={{6,24,1},{13,16,10},{20,17,15}};
-unsigned int b[3][3]={{8,5,10},{21,8,21},{21,12,8}};
-int i,j, t=0;
-unsigned int c[20],d[20];
-char msg[20];
-printf("Enter plain text: ");
-scanf("%s",msg);
-for(i=0;i<strlen(msg);i++)
+#include <ctype.h>
+#include <string.h>
+void encipher();
+void decipher();
+int main()
 {
-c[i]=msg[i]-65;
-unsigned int a[3][3]={{6,24,1},{13,16,10},{20,17,15}};
-unsigned int b[3][3]={{8,5,10},{21,8,21},{21,12,8}};
-printf("%d ",c[i]);
-}
-for(i=0;i<3;i++)
-{ t=0;
-for(j=0;j<3;j++)
+int choice;
+while(1)
 {
-t=t+(a[i][j]*c[j]);
+printf("\n1. Encrypt Text");
+printf("\n2. Decrypt Text");
+printf("\n3. Exit");
+printf("\n\nEnter Your Choice : ");
+scanf("%d",&choice);
+if(choice == 3)
+exit(0);
+else if(choice == 1)
+encipher();
+else if(choice == 2)
+decipher();
+else
+printf("Please Enter Valid Option.");
 }
-d[i]=t%26;
 }
-printf("\nEncrypted Cipher Text :");
-for(i=0;i<3;i++)
-printf(" %c",d[i]+65);
-for(i=0;i<3;i++)
+void encipher()
 {
-t=0;
-for(j=0;j<3;j++)
+unsigned int i,j;
+char input[50],key[10];
+printf("\n\nEnter Plain Text: ");
+scanf("%s",input);
+printf("\nEnter Key Value: ");
+scanf("%s",key);
+printf("\nResultant Cipher Text: ");
+for(i=0,j=0;i<strlen(input);i++,j++)
 {
-t=t+(b[i][j]*d[j]);
+if(j>=strlen(key))
+{ j=0;
 }
-c[i]=t%26;
+printf("%c",65+(((toupper(input[i])-65)+(toupper(key[j])-
+65))%26));
+}}
+void decipher()
+{
+unsigned int i,j;
+char input[50],key[10];
+int value;
+printf("\n\nEnter Cipher Text: ");
+scanf("%s",input);
+printf("\n\nEnter the key value: ");
+scanf("%s",key);
+for(i=0,j=0;i<strlen(input);i++,j++)
+{
+if(j>=strlen(key))
+{ j=0; }
+value = (toupper(input[i])-64)-(toupper(key[j])-64);
+if( value < 0)
+{ value = value * -1;
 }
-printf("\nDecrypted Cipher Text :");
-for(i=0;i<3;i++)
-printf(" %c",c[i]+65);
-getch();
+printf("%c",65 + (value % 26));
+}
 return 0;
 }
 ```
 ### OUTPUT:
-![image](https://github.com/user-attachments/assets/2f518e9c-c9de-498c-ac55-bc26ba230dd1)
+![image](https://github.com/user-attachments/assets/b1d4c682-4c31-4455-a8e5-ea5ec0587069)
 ### RESULT:
 The program is executed successfully
