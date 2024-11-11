@@ -1,5 +1,5 @@
-# Cryptography---19CS412-classical-techqniques
-## Vigenere Cipher
+## Cryptography---19CS412-classical-techqniques
+### Vigenere Cipher
 Vigenere Cipher using with different key values
 ### AIM:
 To develop a simple C program to implement Vigenere Cipher.
