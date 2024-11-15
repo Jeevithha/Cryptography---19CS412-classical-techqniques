@@ -97,12 +97,23 @@ int main() {
 ## RESULT:
 The Caeser Cipher program is executed successfully.
 
+
+
+
+
+
+
+
+
+
+
+
 ---------------------------------
 
-# PlayFair Cipher
+## PlayFair Cipher
 Playfair Cipher using with different key values
 
-## AIM:
+### AIM:
 To implement a program to encrypt a plain text and decrypt a cipher text using play fair Cipher substitution technique.
 
 ## DESIGN STEPS:
@@ -115,7 +126,7 @@ Implementation using C or pyhton code
 ### Step 3:
 Testing algorithm with different key values. 
 
-## ALGORITHM DESCRIPTION:
+### ALGORITHM DESCRIPTION:
  - The Playfair cipher uses a 5 by 5 table containing a key word or phrase. To generate the key table, first fill the spaces in the table with the letters of the keyword, then fill the remaining spaces with the rest of the letters of the alphabet in order (usually omitting "Q" to reduce the alphabet to fit; other versions put both "I" and "J" in the same space). The key can be written in the top rows of the table, from left to right, or in some other pattern, such as a spiral beginning in the upper-left-hand corner and ending in the centre.
 
  - The keyword together with the conventions for filling in the 5 by 5 table constitutes the cipher key. To encrypt a message, one would break the message into digrams (groups of 2 letters) such that, for example, "HelloWorld" becomes "HE LL OW OR LD", and map them out on the key table. Then apply the following 4 rules, to each pair of letters in the plaintext:
@@ -132,7 +143,7 @@ lies on the same row as the first letter of the plaintext pair.
  - To decrypt, use the INVERSE (opposite) of the last 3 rules, and the 1st as-is (dropping any extra "X"s, or "Q"s that do not make sense in the final message when finished).
 
 
-## PROGRAM:
+### PROGRAM:
 ```C
 #include <stdio.h>
 #include <stdlib.h>
@@ -342,12 +353,23 @@ int main() {
 ## RESULT:
 The Program for Play Fair is executed successfully.
 
+
+
+
+
+
+
+
+
+
+
+
 ---------------------------
 
-# Hill Cipher
+## Hill Cipher
 Hill Cipher using with different key values
 
-## AIM:
+### AIM:
 To develop a simple C program to implement Hill Cipher.
 
 ## DESIGN STEPS:
@@ -360,13 +382,13 @@ Implementation using C or pyhton code
 ### Step 3:
 Testing algorithm with different key values.
 
-## ALGORITHM DESCRIPTION:
+### ALGORITHM DESCRIPTION:
  - The Hill cipher is a substitution cipher invented by Lester S. Hill in 1929. Each letter is represented by a number modulo 26. To encrypt a message, each block of n letters is multiplied by an invertible n × n matrix, again modulus 26.
  - To decrypt the message, each block is multiplied by the inverse of the matrix used for encryption. The matrix used for encryption is the cipher key, and it should be chosen randomly from the set of invertible n × n matrices (modulo 26).
  - The cipher can, be adapted to an alphabet with any number of letters. All arithmetic just needs to be done modulo the number of letters instead of modulo 26.
 
 
-## PROGRAM:
+### PROGRAM:
 ```C
 #include <stdio.h>
 #include <string.h>
@@ -463,18 +485,30 @@ int main() {
 }
 ```
 
-## OUTPUT:
+### OUTPUT:
 ![Screenshot 2024-11-14 132045](https://github.com/user-attachments/assets/5f435be0-700e-4007-bdd6-5e184b5793cc)
 
-## RESULT:
+### RESULT:
 The Program for Hill Cipher is executed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
 
 -------------------------------------------------
 
-# Vigenere Cipher
+## Vigenere Cipher
 Vigenere Cipher using with different key values
 
-## AIM:
+### AIM:
 To develop a simple C program to implement Vigenere Cipher.
 
 ## DESIGN STEPS:
@@ -487,12 +521,12 @@ Implementation using C or pyhton code
 ### Step 3:
 Testing algorithm with different key values. 
 
-## ALGORITHM DESCRIPTION:
+### ALGORITHM DESCRIPTION:
  - The Vigenere cipher is a method of encrypting alphabetic text by using a series of different Caesar ciphers based on the letters of a keyword. It is a simple form of polyalphabetic substitution.To encrypt, a table of alphabets can be used, termed a Vigenere square, or Vigenere table.
    
  - It consists of the alphabet written out 26 times in different rows, each alphabet shifted cyclically to the left compared to the previous alphabet, corresponding to the 26 possible Caesar ciphers. At different points in the encryption process, the cipher uses a different alphabet from one of the rows used. The alphabet at each point depends on a repeating keyword.
 
-## PROGRAM:
+### PROGRAM:
 ```C
 #include <stdio.h>
 #include <stdlib.h>  // For exit() function
@@ -572,18 +606,32 @@ void decipher() {
 
 ```
 
-## OUTPUT:
+### OUTPUT:
 ![Screenshot 2024-11-14 151157](https://github.com/user-attachments/assets/24545d64-7a88-4739-b80a-244c640b5d8c)
 
-## RESULT:
+### RESULT:
 The Program for Vigenere Cipher is executed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 -----------------------------------------------------------------------
 
-# Rail Fence Cipher
+## Rail Fence Cipher
 Rail Fence Cipher using with different key values
 
-## AIM:
+### AIM:
 To develop a simple C program to implement Rail Fence Cipher.
 
 ## DESIGN STEPS:
@@ -596,11 +644,11 @@ Implementation using C or pyhton code
 ### Step 3:
 Testing algorithm with different key values. 
 
-## ALGORITHM DESCRIPTION:
+### ALGORITHM DESCRIPTION:
 - In the rail fence cipher, the plaintext is written downwards and diagonally on successive "rails" of an imaginary fence, then moving up when we reach the bottom rail.
 - When we reach the top rail, the message is written downwards again until the whole plaintext is written out. The message is then read off in rows.
 
-## PROGRAM:
+### PROGRAM:
 ```C
 #include <stdio.h>
 #include <string.h>
@@ -709,8 +757,8 @@ int main() {
 
 ```
 
-## OUTPUT:
+### OUTPUT:
 ![Screenshot 2024-11-14 151307](https://github.com/user-attachments/assets/6548b402-bad1-44ac-9285-f7da56e02660)
 
-## RESULT:
+### RESULT:
 The Program for Rail Fence is executed successfully.
